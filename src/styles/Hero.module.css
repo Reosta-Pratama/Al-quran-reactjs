@@ -1,0 +1,61 @@
+section.hero {
+    min-height: 90vh;
+    background-image: url("../../public/img/mosque-in-abu-dhabi-PZXA7BL.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.effect {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    background-image: linear-gradient(180deg, #00000066 65%, #010917 100%);
+}
+
+div.container {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+
+h3.salam {
+    color: #f39632;
+    font-family: Berkshire Swash, Sans-serif;
+    font-size: 1.4em;
+}
+
+h1.title {
+    font-family: Berkshire Swash, Sans-serif;
+    font-size: 5em;
+    line-height: 1em;
+}
+
+div.desc {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 13%;
+    margin-left: 13%;
+}
+
+div.background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("../../public/img/16-sacred-symbols-MR9YMTg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.52;
+}
