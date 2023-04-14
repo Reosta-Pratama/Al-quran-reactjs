@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from '../styles/Quran.module.css'
 
 export default function Quran() {
+    const surah = useRef(null);
     const [quran, setquran] = useState([])
     useEffect(() => {
         async function getAlquran() {
@@ -15,7 +16,8 @@ export default function Quran() {
         getAlquran()
     }, []);
 
-    return (<section className={styles.quran}>
+    return (
+    <section className={styles.quran} id='surah'>
         <div className={styles.background}></div>
         <div className={styles.container}>
             <div className='px-4'>
@@ -35,7 +37,7 @@ export default function Quran() {
 
                 <div className="grid grid-cols-3 gap-4">
                     {
-                        quran?.data?.map(function(item){
+                        quran.data?.map(function(item:any){
                             return(
                                 <div key={item.nomor}>
                                     <div className={styles.content}>

@@ -1,6 +1,6 @@
-.surah {
+.tabs {
     position: relative;
-    padding: 0 1em;
+    padding: 6em 1em;
     background-color: #010917;
 }
 
@@ -24,4 +24,33 @@
     max-width: 1340px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.option {
+    background-color: #021128;
+    padding: 4em 3em;
+    border-radius: 10px;
+}
+
+.button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3em;
+    background-color: #f39632;
+    color: white;
+    border-radius: 10px;
+    text-transform: capitalize;
+
+    padding: 12px 24px;
+    transition: 0.3s ease-in;
+}
+
+.button:hover{
+    background-color: #010917;
+    color: #f39632;
+}
+
+.active{
+    background-color: #010917;
+    color: #f39632;
 }

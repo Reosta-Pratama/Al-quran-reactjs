@@ -1,5 +1,5 @@
 import Badge from '@/components/badge';
-import Surah from '@/components/surah';
+import Tabs from '@/components/tabs';
 import Head from 'next/head'
 import React from 'react'
 
@@ -17,7 +17,7 @@ export const getStaticPaths = async () => {
       paths,
       fallback: false
     }
-  }
+}
 
   export const getStaticProps = async (surah: { params: { nomor: any; }; }) => {
     const nomor = surah.params.nomor;
@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
     return {
       props: { item: result }
     }
-  }
+}
 
 export default function index({item}:any) {
     return (
@@ -37,7 +37,7 @@ export default function index({item}:any) {
             </Head>
 
             <Badge item={item}></Badge>
-            <Surah item={item}></Surah>
+            <Tabs item={item}></Tabs>
         </>
     )
 }
