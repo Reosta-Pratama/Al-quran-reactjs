@@ -1,0 +1,103 @@
+.quran {
+    position: relative;
+    padding: 6em 1em;
+    background-color: #010917;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../../public/img/16-sacred-symbols-MR9YMTh.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1340px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.subtitle {
+    color: #f39632;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4em;
+    font-family: Raleway, Sans-serif;
+}
+
+.title {
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+.desc {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 13%;
+    margin-left: 13%;
+
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+.content {
+    position: relative;
+    background-color: #021128;
+    margin: 15% 3% 3%;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.background_content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background-image: url("../../public/img/16-sacred-symbols-MR9YMTg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.posisi_nomor {
+    text-align: left;
+    margin: -25% 0 -8%;
+}
+
+.nomor {
+    color: #f39632;
+    font-size: 90px;
+    line-height: 1;
+    user-select: none; 
+}
+
+.nama_surat {
+    color: #f39632;
+    font-size: 1.8rem;
+    line-height: 1.3em;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    transition: 0.3s ease;
+}
+
+.nama_surat:hover{
+    color: #b97226;
+}
+
+.desc_surat {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

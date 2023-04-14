@@ -27,14 +27,12 @@ div.container {
     padding: 1rem;
 }
 
-h3.salam {
+h2.salam {
     color: #f39632;
-    font-family: Berkshire Swash, Sans-serif;
     font-size: 1.4em;
 }
 
 h1.title {
-    font-family: Berkshire Swash, Sans-serif;
     font-size: 5em;
     line-height: 1em;
 }
@@ -44,6 +42,9 @@ div.desc {
     text-align: center;
     margin-right: 13%;
     margin-left: 13%;
+
+    font-size: 1rem;
+    line-height: 1.6em;
 }
 
 div.background {

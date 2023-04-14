@@ -8,7 +8,7 @@ export default function Hero() {
         <div className={styles.effect}></div>
         <div className={styles.container}>
             <div className='mb-5 text-center'>
-                <h3 className={styles.salam}>Assalamualaikum</h3>
+                <h2 className={styles.salam}>Assalamualaikum</h2>
             </div>
 
             <div className='mb-5 text-center'>
