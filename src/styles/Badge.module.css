@@ -1,0 +1,40 @@
+.badge {
+    position: relative;
+    background-image: url("../../public/img/wide-shot-of-a-person-wearing-white-thawb-standing-X6KA4GX.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.badge_background {
+    background-color: #021128;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.badge_content{
+    position: relative;
+    z-index: 1;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+.home{
+    color: #f39632;
+    transition: 0.3s ease;
+}
+
+.home:hover{
+    color: #b97226;
+}

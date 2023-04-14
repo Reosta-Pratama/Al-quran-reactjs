@@ -1,11 +1,13 @@
+import Badge from '@/components/badge';
+import Surah from '@/components/surah';
 import Head from 'next/head'
 import React from 'react'
 
 export const getStaticPaths = async () => {
-    const res = await fetch('https://equran.id/api/v2/surat');
-    const data = await res.json();
+    const request = await fetch('https://equran.id/api/v2/surat');
+    const result = await request.json();
   
-    const paths = data?.data?.map(item => {
+    const paths = result.data?.map((item: { nomor: { toString: () => any; }; }) => {
       return {
         params: { nomor: item.nomor.toString() }
       }
@@ -17,7 +19,7 @@ export const getStaticPaths = async () => {
     }
   }
 
-  export const getStaticProps = async (surah) => {
+  export const getStaticProps = async (surah: { params: { nomor: any; }; }) => {
     const nomor = surah.params.nomor;
     const request = await fetch('https://equran.id/api/v2/surat/' + nomor);
     const result = await request.json();
@@ -27,12 +29,15 @@ export const getStaticPaths = async () => {
     }
   }
 
-export default function index({item}) {
+export default function index({item}:any) {
     return (
-        <section>
+        <>
             <Head>
-                <title>{item.data.nama}</title>
+                <title>{item.data.namaLatin} - {item.data.nama}</title>
             </Head>
-        </section>
+
+            <Badge item={item}></Badge>
+            <Surah item={item}></Surah>
+        </>
     )
 }
