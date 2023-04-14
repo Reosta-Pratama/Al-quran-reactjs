@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styles from '../styles/Surah.module.css'
+import { padWithLeadingZeros } from './tafsir';
 
 export default function Surah({item} : any) {
     useEffect(() => {
@@ -18,16 +18,15 @@ export default function Surah({item} : any) {
     }, []);
 
     return (
-        <section className={styles.surah}>
-            <div className={styles.background}></div>
-            <div className={styles.container}>
+        <section className='relative'>
+            <div>
                 {
                     item
                         .data
                         .ayat
                         .map(function (ayat : any) {
                             return (
-                                <div key={ayat.nomorAyat} className='grid grid-cols-3 py-4 border-b border-[#021b42] border-solid'>
+                                <div key={ayat.nomorAyat} className='grid grid-cols-3 py-4 -mx-4 border-b border-[#021b42] border-solid'>
                                     <div className='py-4 px-4 flex items-center'>
                                         {ayat.audio && <audio className='w-full' src={ayat.audio['05']} controls></audio>}
                                     </div>
@@ -38,7 +37,7 @@ export default function Surah({item} : any) {
                                         </div>
                                         
                                         <div className="mt-2 mb-4">
-                                            <h3 className='text-2xl'><span>{ayat.nomorAyat}.</span> {ayat.teksLatin}</h3>
+                                            <h3 className='text-2xl'><span>{padWithLeadingZeros(ayat.nomorAyat, 2)}.</span> {ayat.teksLatin}</h3>
                                         </div>
                                         <p className='text-md'>{ayat.teksIndonesia}</p>
                                     </div>

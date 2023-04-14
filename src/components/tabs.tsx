@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, {useState} from 'react'
 import styles from '../styles/Tabs.module.css'
 import Surah from './surah'
+import Tafsir from './tafsir'
 
 export default function Tabs({item} : any) {
     const [active, setactive] = useState(2)
@@ -82,9 +83,7 @@ export default function Tabs({item} : any) {
                             ? "block"
                             : "hidden"}
                         id="link3">
-                        <p>
-                            3
-                        </p>
+                        <Tafsir item={item}></Tafsir>
                     </div>
                 </div>
             </div>

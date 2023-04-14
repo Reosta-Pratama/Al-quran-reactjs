@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '../styles/Quran.module.css'
+import { padWithLeadingZeros } from './tafsir';
 
 export default function Quran() {
-    const surah = useRef(null);
     const [quran, setquran] = useState([])
     useEffect(() => {
         async function getAlquran() {
@@ -44,7 +44,7 @@ export default function Quran() {
                                         <div className={styles.background_content}></div>
                                         <div className='mb-5 pb-5'>
                                             <div className={styles.posisi_nomor}>
-                                                <span className={styles.nomor}>{item.nomor}</span>
+                                                <span className={styles.nomor}>{padWithLeadingZeros(item.nomor, 2)}</span>
                                             </div>
                                         </div>
                                         <div className='relative z-10'>
