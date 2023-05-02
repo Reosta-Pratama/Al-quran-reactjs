@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import React, {useState} from 'react'
+import React, {Suspense, useState} from 'react'
 import styles from '../styles/Tabs.module.css'
-import Surah from './surah'
-import Tafsir from './tafsir'
+const Surah = React.lazy(() => import('./surah'));
+const Tafsir = React.lazy(() => import('./tafsir'));
 
 export default function Tabs({item} : any) {
     const [active, setactive] = useState(2)
@@ -76,14 +76,18 @@ export default function Tabs({item} : any) {
                             ? "block"
                             : "hidden"}
                         id="link2">
-                        <Surah item={item}></Surah>
+                        <Suspense fallback={<p>Loading..</p>}>
+                            <Surah item={item}></Surah>
+                        </Suspense>
                     </div>
                     <div
                         className={active === 3
                             ? "block"
                             : "hidden"}
                         id="link3">
-                        <Tafsir item={item}></Tafsir>
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <Tafsir item={item}></Tafsir>
+                        </Suspense>
                     </div>
                 </div>
             </div>

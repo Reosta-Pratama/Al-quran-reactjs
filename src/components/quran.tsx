@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { Suspense, useEffect, useRef, useState } from 'react'
 import styles from '../styles/Quran.module.css'
 import { padWithLeadingZeros } from './tafsir';
 
@@ -36,6 +36,7 @@ export default function Quran() {
                 </div>
 
                 <div className="grid grid-cols-3 gap-4">
+                    <Suspense fallback={<p>Loading...</p>}>
                     {
                         quran.data?.map(function(item:any){
                             return(
@@ -56,6 +57,7 @@ export default function Quran() {
                             )
                         })
                     }
+                    </Suspense>
                 </div>
             </div>
         </div>
